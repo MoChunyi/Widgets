@@ -1,6 +1,6 @@
 import {getNews, GetNews} from './actions';
 
-import { call, put, takeEvery, all, take,select } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from 'redux-saga/effects';
 import { get } from 'http';
 
 export function* newsSaga() {
