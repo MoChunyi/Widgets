@@ -13,4 +13,4 @@ redux-dynamic-modules、react、redux
 >>>- 传递给saga的action type 和 reducer 里面的type需要区分开。
 >>>- saga 调用的所有函数，如果函数显示的声明了参数，那么在调用时（call，或者takeEvery），必须显示的传入参数，即使传入的时undefined。
 
-按顺序书写每一部分
+>>>按顺序书写每一部分
