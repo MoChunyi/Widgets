@@ -6,7 +6,7 @@ import { get } from 'http';
 export function* newsSaga() {
     yield call(fetchNews);
     //可以运行成功
-    yield takeEvery(GetNews + "M", getNewsByNum, 30)
+    yield takeEvery(GetNews + "M", getNewsByNum,undefined)
     // while(true) {
     //     可以成功运行
     //     const action = yield take(GetNews + "M");
@@ -57,8 +57,9 @@ const getNewsEffects= (idsJson, num) => {
  * @param {*} num 
  */
 function* getNewsByNum(num = 20,...args) {
-    console.log(args[args.length-1])//获取action,takeEvery 默认的把action追加到参数的末尾。
-    console.log(num)
+    num = args[args.length-1].num;
+    // console.log(args[args.length-1])//获取action,takeEvery 默认的把action追加到参数的末尾。
+    // console.log(num)
     const url = "https://hacker-news.firebaseio.com/v0/topstories.json";
     const idsJson = yield call(fetch, url);
     const idsarr = yield call([idsJson, idsJson.json])

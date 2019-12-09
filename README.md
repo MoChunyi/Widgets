@@ -1,5 +1,7 @@
 # Widgets
-redux-dynamic-modules、react、redux
+> [在线demo](https://mochunyi.github.io/Widgets/)
+### 技术点
+>>redux-dynamic-modules、react、redux
 ## redux-dynamic-modules 结合 redux-dynamic-modules-saga使用
     本案例中将组件分为两部分，视图component和状态管理redux。
 #### redux 组成部分:
